@@ -40,3 +40,45 @@ $(document).ready(function () {
         }
     })
 })
+
+// Login de Facebook
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '204432946965031',
+      cookie     : true,
+      xfbml      : true,
+      version    : "v2.5"
+    });
+      
+    FB.getLoginStatus(function(response) {
+        if(response.status === 'connected'){
+            document.getElementById('status').innerHTML = "We are connected";
+        } else if (response === 'not authotized') {
+            document.getElementById('status').innerHTML = 'we are not logged in.'
+        } else {
+            document.getElementById('status').innerHTML = 'you are not logget into facebook';
+        }
+    });   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+  function login() {
+    FB.login(function(response){
+               if(response.status === 'connected'){
+            document.getElementById('status').innerHTML = "We are connected";
+        } else if (response === 'not authotized') {
+            document.getElementById('status').innerHTML = 'we are not logged in.'
+        } else {
+            document.getElementById('status').innerHTML = 'you are not logget into facebook';
+        }
+    });
+  };
