@@ -1,0 +1,14 @@
+*{
+	font-family: 'Skranji', cursive;
+	color:#ff7766;
+	background-color:#88ffaa;
+	font-size: 30px;
+}
+
+.nav, .nav-item{
+	background-color:#11eedd;
+	position: relative;
+}
+.rounded-circle {
+	margin:140px;
+}
