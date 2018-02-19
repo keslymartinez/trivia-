@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css?family=Skranji:400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 </head>
-
 <body>
   <div class="container">
     <header class="row">
@@ -54,8 +53,6 @@
       <div id="questions" class="container"></div>
     </div>
   </div>
-
-
   <!-- script -->
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
@@ -64,5 +61,51 @@
     crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </body>
-
+       <body>
+          <div class="container">
+            <header class="row">
+              <ul class="nav nav-tabs">
+                <li role="presentation" class="active">
+                  <a href="#">
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a href="#">
+                    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a href="#">
+                    <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                  </a>
+                </li>
+              </ul>
+            </header>
+            <div class="row">
+              <div class="content">
+                <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 text-center">
+                  <h1>Welcome to trivia</h1>
+                  <img src="assets/img/gato.jpg"
+                    alt="Gato" class="img-circle img-responsive imgUno">
+                  <br>
+                  <button class="btn btn-primary" id="startTrivia">Start</button>
+                </div>
+              </div>
+              <div id="questions"></div>
+            </div>
+          </div> 
+          <!--Login de facebook -->
+          
+            <div id="status"></div>
+            <button onclick="login()" id="login">Login</button>
+        
+          <!-- script -->
+          <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+          <script src="assets/js/app.js" type="text/javascript"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+          <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        </body>
 </html>
