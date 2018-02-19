@@ -86,7 +86,7 @@ $(document).ready(function () {
                     function questionsThree(news) {
                         console.log('tres');
 
-                        const trivia = news.results[0]
+                        const trivia = news.results[5]
                         let $divs = (`
                             <div class="container text-center">
                             <br>
@@ -110,7 +110,7 @@ $(document).ready(function () {
                         function questionsThree(news) {
                             console.log('cuatro');
 
-                            const trivia = news.results[0]
+                            const trivia = news.results[3]
                             let $divs = (`
                             <div class="container text-center">
                             <br>
@@ -134,7 +134,7 @@ $(document).ready(function () {
                             function questionsFive(news) {
                                 console.log('cinco');
 
-                                const trivia = news.results[0]
+                                const trivia = news.results[1]
                                 let $divs = (`
                             <div class="container text-center">
                             <br>
@@ -158,7 +158,7 @@ $(document).ready(function () {
                                 function questionsFive(news) {
                                     console.log('seis');
 
-                                    const trivia = news.results[0]
+                                    const trivia = news.results[8]
                                     let $divs = (`
                             <div class="container text-center">
                             <br>
@@ -182,7 +182,7 @@ $(document).ready(function () {
                                     function questionsFive(news) {
                                         console.log('siete');
 
-                                        const trivia = news.results[0]
+                                        const trivia = news.results[6]
                                         let $divs = (`
                             <div class="container text-center">
                             <br>
@@ -206,7 +206,7 @@ $(document).ready(function () {
                                         function questionsFive(news) {
                                             console.log('ocho');
 
-                                            const trivia = news.results[0]
+                                            const trivia = news.results[2]
                                             let $divs = (`
                             <div class="container text-center">
                             <br>
@@ -254,7 +254,7 @@ $(document).ready(function () {
                                                 function questionsFive(news) {
                                                     console.log('diez');
 
-                                                    const trivia = news.results[0]
+                                                    const trivia = news.results[7]
                                                     let $divs = (`
                             <div class="container text-center">
                             <br>
@@ -279,7 +279,7 @@ $(document).ready(function () {
                                                     function questionsFive(news) {
                                                         console.log('final');
 
-                                                        const trivia = news.results[0]
+                                                        const trivia = news.results[9]
                                                         let $divs = (`
                             <div class="container text-center">
                             <br>
