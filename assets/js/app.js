@@ -1,11 +1,12 @@
 $(document).ready(function () {
+    // Preguntas de seleción multiple
     $('#startTrivia').click(function () {
         $('.content').html('');
         $.ajax({
-            url: `https://opentdb.com/api.php?amount=20&difficulty=easy&type=multiple`,
-            mothod: 'GET',
-            datatype: 'json'
-        }).done(questionsTrivia)
+                url: `https://opentdb.com/api.php?amount=20&difficulty=easy&type=multiple`,
+                mothod: 'GET',
+                datatype: 'json'
+            }).done(questionsTrivia)
             .fail(error)
 
         function questionsTrivia(news) {
@@ -61,18 +62,18 @@ $(document).ready(function () {
             console.log('Se ha presentado un error')
         }
     })
+    // preguntas de verdadero/falso
     $('#startTriviaTf').click(function () {
         $('.content').html('');
         $.ajax({
-            url: `https://opentdb.com/api.php?amount=20&difficulty=easy&type=boolean`,
-            mothod: 'GET',
-            datatype: 'json'
-        }).done(questionsTrivia)
+                url: `https://opentdb.com/api.php?amount=20&difficulty=easy&type=boolean`,
+                mothod: 'GET',
+                datatype: 'json'
+            }).done(questionsTrivia)
             .fail(error)
 
         function questionsTrivia(news) {
             const trivia = news.results[0]
-
             const category = trivia.category
             const question = trivia.question
             const incorrect = trivia.incorrect_answers
@@ -89,11 +90,17 @@ $(document).ready(function () {
                                 <button class="btn btn-primary" id="true">${correct}</button>
                             </div>
                 `)
-
-
-            console.log(category);
             $('#questions').append($div)
-
+            // Cambia a la siguiente pregunta
+            $('#true').click(function () {
+                $('#questions').html('');
+                $.ajax({
+                        url: `https://opentdb.com/api.php?amount=20&difficulty=easy&type=boolean`,
+                        mothod: 'GET',
+                        datatype: 'json'
+                    }).done(questionsTrivia)
+                    .fail(error)
+            })
             console.log(trivia);
         }
 
@@ -101,6 +108,7 @@ $(document).ready(function () {
             console.log('Se ha presentado un error')
         }
     })
+
 })
 
 // Login de Facebook
